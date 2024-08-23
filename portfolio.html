@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio </title>
+    <link rel="stylesheet" href="style1.css">
+    
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul id="sidemenu">
+                
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Skills</a></li>
+                <li><a href="#portfolio">Portfolio/Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <img src="tiru2.jpeg" alt="" align="left" width="380px"><br>
+            <br>
+            <br>
+            <h2 class="dak">Hi, I'm <span>Daksh Bhardwaj</span><br></h2>
+            <p class="dakp">Front End Web Developer</p>
+        </div>
+    </div>
+</div>
+<!-- -----------about-------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="tiru1.jpeg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title1">About Me</h1>
+                <p>I'm Daksh Bhardwaj from IT-branch</p><br>
+                <p>🌐 Web Developer | Web Designer | Front-End Specialist</p>
+                <br>
+               
+              <p>  Daksh Bhardwaj is a skilled web developer with a strong passion for creating intuitive and visually appealing websites. With expertise in HTML, CSS, JavaScript, and modern frameworks, Daksh builds responsive and user-friendly web applications. His attention to detail and problem-solving skills ensure that each project is not only aesthetically pleasing but also functional and efficient. Whether working on front-end or back-end development, Daksh consistently delivers high-quality results that meet client needs and industry standards..</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                  
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web interfaces</li>
+                        <li><span>Web Development</span><br>Front End Web Development</li>
+                        <li><span>HTML</span></li>
+                        <li><span>CSS</span></li>
+                        <li><span>JavaScript</span></li>
+                    </ul>
+                </div>
+               
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022-present</span><br>B-Tech(Information Technology)<br>From GURU TEGH BAHADUR INSTITUTE OF TECHNOLOGY</li>
+                    </ul>
+                    <ul>
+                        <li><span>2007-2021</span><br>High School <br>From AES DR KRBM SR SEC SCHOOL</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------services---------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title1">My Skills</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web Design</h2>
+                <p>I'm a passionate web designer who crafts user-friendly and visually stunning websites. 
+                    I love turning ideas into interactive experiences that captivate audiences and achieve results. 
+                    With a keen eye for design and a focus on user experience (UX), 
+                    I help businesses build a strong online presence that reflects their unique brand.</p>
+            </div>
+            <div>
+                <h2>Web Developer</h2>
+                <p>I'm an enthusiastic web developer with a strong foundation in web development principles. 
+                I'm skilled in HTML, CSS, and JavaScript, and I'm eager to learn more about advanced frameworks and technologies. 
+                I'm a quick learner with a problem-solving mindset, and I'm always looking for ways to improve my coding skills.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ----------portfolio-------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title1">My Projects</h1>
+        <div class="work-list">
+          
+            <div class="work">
+                <img src="tic.png">
+                <div class="layer">
+                    <h3>TIC TAC TOE</h3>
+                </div>
+            </div>
+            <div class="work">
+                <img src="calcu.png">
+                <div class="layer">
+                    <h3>Calculator</h3>
+                    
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-- ----------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i><b>E-Mail</b></i><b>daksh.bhardwaj3002@gmail.com</b></p>
+                <p><i ><b>Phone</b></i><b>+91 9625541919</b></p>
+                <a href="ertyuio.jpg" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Daksh Bhardwaj.2024</p>
+    </div>
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+</body>
+</html>
